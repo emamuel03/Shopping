@@ -1,20 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Shopping.Data.Entities
+namespace Shopping.Models
 {
-    public class Country
+    public class StateViewModel
     {
         public int Id { get; set; }
 
-        [Display(Name = "País")]
+        [Display(Name = "Estado")]
         [MaxLength(50, ErrorMessage = "El campo {0} debe tener maximo {1} caracteres.")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Name { get; set; }
 
-        public ICollection<State> States { get; set; }
-
-        [Display(Name = "Estados")]
-        public int StatesNumber => States == null ? 0 : States.Count;
+        public int CountryId { get; set; }
     }
 }
