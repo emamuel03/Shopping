@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Shopping.AddCategoryCountry
+namespace Shopping.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class AddCountryCategory : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
